@@ -1,14 +1,15 @@
-## name of project
+## Road Trip
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/mlfryman/road-trip.svg)](https://travis-ci.org/mlfryman/road-trip)
+[![Coverage Status](https://coveralls.io/repos/mlfryman/road-trip/badge.png)](https://coveralls.io/r/mlfryman/road-trip)
 
 ### About
 write a description about your project
 
 ### Models
 ```
-Model 1
+Trip
+------------
 prop-a
 prop-b
 .classMethod-c
@@ -16,7 +17,8 @@ prop-b
 ```
 
 ```
-Model 2
+Stops
+------------
 prop-e
 prop-f
 .classMethod-g
@@ -24,9 +26,16 @@ prop-f
 ```
 
 ### Features
-- feature 1
-- feature 2
-- feature 3
+- Object Oriented
+- MVC
+- TDD
+- Mocha
+- MongoDB
+- Jade
+- Express
+- Less
+- Bootstrap
+- Maps
 
 ### Running Tests
 ```bash
@@ -35,8 +44,8 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Melanie Fryman](https://github.com/mlfryman)
 
 ### License
-[MIT](LICENSE)
+- [MIT](LICENSE)
 
