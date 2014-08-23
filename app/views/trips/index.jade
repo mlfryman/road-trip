@@ -1,0 +1,53 @@
+extends ../shared/template
+block content
+  .container
+      #banner.page-header
+        .row
+          .col-xs-12
+            h2#header Trips
+      .panel.panel-default
+        .panel-body
+          .row
+            .col-xs-12
+              h3 Trips:
+          .row
+            .col-xs-12
+              table.table.table-condensed
+                thead
+                  tr
+                    th Name
+                    th Cash
+                    th Origin
+                    th Destination
+                    th From
+                    th To
+                    th Stops
+                    th Distance
+                    th MPG
+                    th Gas/Gal
+                    th Gallons
+                    th Cost
+                    th Delta
+                    th Photos
+                    th Events
+                tbody
+                  each trip in trips
+                    tr.trip-row
+                      td: a(href='/trips/#{trip._id}')= trip.name
+                      td $#{trip.cash.toFixed(2)}
+                      td= trip.originLoc.name
+                      td= trip.destinationLoc.name
+                      td= moment(trip.from).format('MMM Do YY')
+                      td= moment(trip.to).format('MMM Do YY')
+                      td= trip.stops
+                      td #{trip.distance.toFixed(2)} mi
+                      td= trip.mpg
+                      td $#{trip.costPerGal.toFixed(2)}
+                      td= trip.gallons.toFixed(2)
+                      td $#{trip.cost.toFixed(2)}
+                      td $#{trip.delta.toFixed(2)}
+                      td= trip.photos
+                      td= trip.events
+
+block scripts
+  script(src='/js/user/index.js')

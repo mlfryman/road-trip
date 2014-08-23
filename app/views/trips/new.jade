@@ -1,0 +1,51 @@
+extends ../shared/template
+block content
+  .container
+      #banner.page-header
+        .row
+          .col-xs-12
+            h2#header Add a trip
+      .panel.panel-default
+        .panel-body
+          .row
+            form(role='form', method='post', action='/trips', enctype='multipart/form-data')
+              .col-xs-5
+                .form-group
+                  label(for='tripName') Trip Name
+                  input#tripName.form-control(type='text', placeholder='Corpus Christi 2014', name='name')
+                .form-group
+                  label(for='cash') Cash
+                  input#cash.form-control(type='number', placeholder='500', name='cash')
+                .form-group
+                  label(for='origin') Origin
+                  input#origin.form-control(type='text', placeholder='Nashville, TN', name='origin')
+                  input#originLat.form-control(type='hidden', name='origin')
+                  input#originLng.form-control(type='hidden', name='origin')
+                .form-group
+                  label(for='destination') Destination
+                  input#destination.form-control(type='text', placeholder='Corpus Christi, TX', name='destination')
+                  input#destinationLat.form-control(type='hidden', name='destination')
+                  input#destinationLng.form-control(type='hidden', name='destination')
+                .form-group
+                  label(for='carPhoto') Car Photo
+                  input#carPhoto.form-control(type='file',  name='carPhoto', multiple=false)
+              .col-xs-5
+                .form-group
+                  label(for='startDate') Start Date
+                  input#startDate.form-control(type='date',  name='startDate')
+                .form-group
+                  label(for='endDate') End Date
+                  input#endDate.form-control(type='date',  name='endDate')
+                .form-group
+                  label(for='mpg') MPG
+                  input#mpg.form-control(type='number', placeholder='35', name='mpg')
+                .form-group
+                  label(for='gasCost') Gas Cost / gal
+                  .input-group
+                    span.input-group-addon $
+                    input#gasCost.form-control(type='number', step='any', placeholder='5.00', name='gasCost')
+                    input#distance.form-control(type='hidden', name='distance')
+                button.btn.btn-primary.btn-lg(type='submit') Submit
+
+block scripts
+  script(src='/js/user/new-trip.js')
