@@ -4,31 +4,31 @@ block content
       #banner.page-header
         .row
           .col-xs-12
-            h2#header Add a trip
+            h2#header Add a New Road Trip
       .panel.panel-default
         .panel-body
           .row
             form(role='form', method='post', action='/trips', enctype='multipart/form-data')
               .col-xs-5
                 .form-group
-                  label(for='tripName') Trip Name
-                  input#tripName.form-control(type='text', placeholder='Corpus Christi 2014', name='name')
+                  label(for='name') Trip Name
+                  input#name.form-control(type='text', placeholder='Corpus Christi 2014', name='name')
                 .form-group
                   label(for='cash') Cash
                   input#cash.form-control(type='number', placeholder='500', name='cash')
                 .form-group
                   label(for='origin') Origin
-                  input#origin.form-control(type='text', placeholder='Nashville, TN', name='origin')
-                  input#originLat.form-control(type='hidden', name='origin')
-                  input#originLng.form-control(type='hidden', name='origin')
+                  input#origin.form-control(type='text', placeholder='Nashville, TN', name='originName')
+                  input#originLat.form-control(type='hidden', name='originLat')
+                  input#originLng.form-control(type='hidden', name='originLng')
                 .form-group
                   label(for='destination') Destination
-                  input#destination.form-control(type='text', placeholder='Corpus Christi, TX', name='destination')
-                  input#destinationLat.form-control(type='hidden', name='destination')
-                  input#destinationLng.form-control(type='hidden', name='destination')
+                  input#destination.form-control(type='text', placeholder='Corpus Christi, TX', name='destinationName')
+                  input#destinationLat.form-control(type='hidden', name='destinationLat')
+                  input#destinationLng.form-control(type='hidden', name='destinationLng')
                 .form-group
-                  label(for='carPhoto') Car Photo
-                  input#carPhoto.form-control(type='file',  name='carPhoto', multiple=false)
+                  label(for='photo') Car Photo
+                  input#carPhoto.form-control(type='file',  name='photo', multiple=false)
               .col-xs-5
                 .form-group
                   label(for='startDate') Start Date
@@ -45,7 +45,7 @@ block content
                     span.input-group-addon $
                     input#gasCost.form-control(type='number', step='any', placeholder='5.00', name='gasCost')
                     input#distance.form-control(type='hidden', name='distance')
-                button.btn.btn-primary.btn-lg(type='submit') Submit
+            button.btn.btn-primary.btn-lg(type='submit') Hit the Road!
 
 block scripts
-  script(src='/js/user/new-trip.js')
+  script(src='/js/user/new.js')

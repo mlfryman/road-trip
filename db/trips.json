@@ -1,0 +1,41 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"Corpus Christi 2014",
+  "cash":500,
+  "origin":{"name":"Nashville, TN, USA", "lat":36.166667, "lng":-86.783333},
+  "destination":{"name":"Corpus Christi, TX, USA", "lat":27.742778, "lng":-97.401944},
+  "mpg":25,
+  "gasCost":2.5,
+  "distance":1000,
+  "startDate":{"$date":1388556000000},
+  "endDate":{"$date":1389765600000},
+  "photo":["/img/000000000000000000000001/0.jpg"],
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"New York City 2014",
+  "cash":500,
+  "origin":{"name":"Nashville, TN, USA", "lat":36.16, "lng":-86.8},
+  "destination":{"name":"New York, NY, USA", "lat":40.7127, "lng":-74.0059},
+  "mpg":25,
+  "gasCost":2.5,
+  "distance":1000,
+  "startDate":{"$date":1401598800000},
+  "endDate":{"$date":1402808400000},
+  "photo":["/img/000000000000000000000002/0.jpg"]
+}
+
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"Seattle 2014",
+  "cash":500,
+  "origin":{"name":"Nashville, TN, USA", "lat":36.16, "lng":-86.8},
+  "destination":{"name":"Seattle, WA, USA", "lat":47.609722, "lng":-122.333056},
+  "mpg":25,
+  "gasCost":2.5,
+  "distance":1000,
+  "startDate":{"$date":1414818000000},
+  "endDate":{"$date":1416031200000},
+  "photo":["/img/000000000000000000000003/0.jpg"]
+}

@@ -20,12 +20,12 @@ module.exports = function(app, express){
   app.get('/trips/new', trips.new);
   app.post('/trips', trips.create);
   app.get('/trips', trips.index);
-  app.get('/trips/:tripId', trips.show);
+  app.get('/trips/:id', trips.stops);
 
-  app.post('/trips/:tripId/stops', stops.create);
-  app.get('/trips/:tripId/stops/:stopId', stops.show);
-  app.post('/trips/:tripId/stops/:stopId/events', stops.addEvent);
-  app.post('/trips/:tripId/stops/:stopId/photos', stops.addPhoto);
+  app.post('/trips/:id', stops.createStop);
+  app.get('/trips/:id/stops/:stopid', stops.events);
+  app.post('/trips/:id/stops/:stopid', stops.createEvent);
+
 
   console.log('Express: Routes Loaded');
 };

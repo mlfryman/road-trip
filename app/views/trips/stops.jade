@@ -1,0 +1,30 @@
+extends ../shared/template
+block content
+    h2.coordinates(data-olat=trip.origin.lat, data-olng=trip.origin.lng, data-dlat=trip.destination.lat, data-dlng=trip.destination.lng) Trip Stops
+    #map
+    .row
+      .col-xs-6
+        h5 Stops
+        ol
+          each stop in stops
+            li: a.stop(href='/trips/#{trip._id}/stops/#{stop._id}' data-lat=stop.lat, data-lng=stop.lng)= stop.name
+      .col-xs-6
+        form(method='post' id='stopsForm' actions='/trips/#{trip._id}')
+          input(type='hidden' name='tripID' value='#{trip._id}')
+          button(type='button')#add.btn.btn-danger.full Add Additional Stop
+          .form-group
+            label Add Stop(s)
+          #stops
+          .stop-group
+            input.form-control(type='text' name='name')
+          button(type='submit' form='stopsForm').btn.btn-default.full Submit
+    .row
+      .col-xs-6
+        h5 Directions
+        #directions
+      .col-xs-6
+        #photo(style='background-image: url(#{trip.photo[0]})')
+
+
+block scripts
+  script(src='/js/user/stops.js')
